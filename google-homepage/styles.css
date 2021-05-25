@@ -33,12 +33,12 @@ nav div{
 
 }
 
-nav div:nth-child(1){
+.first {
     padding-bottom: 20px;
     justify-content: flex-start;
 }
 
-nav div:nth-child(2){
+.second {
     justify-content: flex-end;
     text-align: right;
     right: 0;
