@@ -34,7 +34,7 @@ nav div{
 }
 
 .thing {
-    background: url(https://ssl.gstatic.com/gb/images/i2_2ec824b0.png) -132px -38px/528px 68px;
+    background: url(https://ssl.gstatic.com/gb/images/i2_2ec824b0.png) -132px -38px / 528px 68px;
     box-sizing: border-box;
     display: inline-block;
     height: 30px;
