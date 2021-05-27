@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    height: 100%;
+}
+
+
+.search-div {
+    top: 0;
+    width: 100%;
+    display: flex;
+}
+
+.search-div > * {
+    flex-basis: 100%;
+}
+
+.first {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.second {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+}
