@@ -86,6 +86,10 @@ main {
     padding-left: 15%;
 }
 
+main a{
+    text-decoration: none;
+}
+
 .result-time {
     color:#70757a;
     font-family: 'Open Sans', sans-serif;
