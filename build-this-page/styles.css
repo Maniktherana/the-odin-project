@@ -85,7 +85,7 @@ header{
     display: flex;
     gap: 2em;
     padding-top: 2em;
-    padding-left: 15%;
+    padding-left: 10%;
     padding-bottom: 1em;
 }
 
@@ -96,8 +96,8 @@ header{
 }
 
 main {
-    padding-left: 15%;
-    width: 50%;
+    padding-left: 10%;
+    width: 30%;
 }
 
 main a{
@@ -139,7 +139,7 @@ nav{
 .top {
     padding-bottom: 1em;
     padding-top: 1em;
-    padding-left: 15%;
+    padding-left: 10%;
 
 }
 
@@ -148,6 +148,6 @@ nav{
     gap: 2em;
     padding-bottom: 1em;
     padding-top: 1em;
-    padding-left: 15%;
+    padding-left: 10%;
     border-top: 1px solid #94949457;
 }
