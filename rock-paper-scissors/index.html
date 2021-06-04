@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="modal.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+    </div>
     <div class="selections">
       <button class="selection" id="rock">✊</button>
       <button class="selection" id="paper">✋</button>
@@ -27,8 +31,11 @@
         <span class="result-score" id="computerScore">0</span>
       </div>
     </div>
-    <div class="restart">
-        <button class="restart-game">Restart</button>
+    <div class="modal">
+        <div class="modal-content" id="result">
+            <h1>You Win !!</h1>
+            <button class="restart-game">Restart</button>
+        </div>
     </div>
   </body>
 </html>

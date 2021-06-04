@@ -2,6 +2,11 @@ body {
     background-color: #CCC;
   }
   
+.container {
+    display: flex;
+    justify-content: center;
+}
+
   .selections {
     display: flex;
     justify-content: center;
@@ -42,12 +47,6 @@ body {
   .result-selection.winner {
     opacity: 1;
     font-size: 1.5rem;
-  }
-
-  .restart{
-      display: flex;
-      justify-content: center;
-      align-items: center;
   }
 
   .restart-game {
