@@ -1,13 +1,12 @@
 const choices = document.querySelectorAll('.selection')
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
-const modal = document.querySelector('modal')
+const modal = document.getElementById('modal')
 const playerScore = document.getElementById('playerScore')
 const compuerScore = document.getElementById('computerScore')
 const scoreBoard = {
     player: 0,
     computer: 0,
-    roundCount: 0
 }
 const SELECTIONS = [
     {
@@ -32,13 +31,17 @@ const SELECTIONS = [
  * @param {*} e 
  */
 function play(e) {
-    scoreBoard.roundCount++
+    
     const playerSelection = SELECTIONS.find(selection => selection.name === e.target.id)
     const compterSelection = getComputerChoice()
     const playerChoice = playerSelection.name
     const computerChoice = compterSelection.name
     const win = playRound(playerSelection, compterSelection)
-    console.log(playerChoice, computerChoice, win, scoreBoard)
+    if(gameOver()){
+        modal.style.display = 'block'
+    }
+    console.log(playerChoice, computerChoice, win, scoreBoard, gameOver())
+
 }
 
 /**
@@ -56,7 +59,6 @@ function getComputerChoice() {
  * @returns Whoever wins the round
  */
 function playRound(choice, opponentChoice) {
-    
     if (choice === opponentChoice) {
         return 'Draw'
     } else if (choice.beats === opponentChoice.name) {
@@ -68,11 +70,28 @@ function playRound(choice, opponentChoice) {
         computerScore.textContent = scoreBoard.computer
         return 'Computer Wins'
     }
+    if(scoreBoard.player === 5 || scoreBoard.computer === 5) {
+        modal.style.display = 'inline-block'
+    }
 }
 
-function showModal(win) {
-    
+/**
+ * Check if player or computer have a score of 5
+ * @returns boolean
+ */
+function gameOver(){
+    return (scoreBoard.player === 5 || scoreBoard.computer === 5)
 }
+
+//new game
+restart.addEventListener('click', () => {
+    scoreBoard.player = 0
+    playerScore.textContent = scoreBoard.player
+    scoreBoard.computer = 0
+    computerScore.textContent = scoreBoard.computer
+    modal.style.display = 'none'
+})
+
 
 //Event Listener
 choices.forEach(choice => choice.addEventListener('click', play))
