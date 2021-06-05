@@ -4,6 +4,7 @@ const result = document.getElementById('result')
 const modal = document.getElementById('modal')
 const playerScore = document.getElementById('playerScore')
 const compuerScore = document.getElementById('computerScore')
+const winnerFinal = document.getElementById('winner-congrats')
 const scoreBoard = {
     player: 0,
     computer: 0,
@@ -39,6 +40,9 @@ function play(e) {
     const win = playRound(playerSelection, compterSelection)
     if(gameOver()){
         modal.style.display = 'block'
+        if (scoreBoard.computer === 5) {
+            winnerFinal.textContent = 'Computer Wins !!'
+        }
     }
     console.log(playerChoice, computerChoice, win, scoreBoard, gameOver())
 
@@ -76,14 +80,14 @@ function playRound(choice, opponentChoice) {
 }
 
 /**
- * Check if player or computer have a score of 5
+ * Check if player or computer has a score of 5
  * @returns boolean
  */
 function gameOver(){
     return (scoreBoard.player === 5 || scoreBoard.computer === 5)
 }
 
-//new game
+//reset the game when the restart button is clicked
 restart.addEventListener('click', () => {
     scoreBoard.player = 0
     playerScore.textContent = scoreBoard.player
