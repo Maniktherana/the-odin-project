@@ -1,0 +1,27 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(8rem, 100px));
+    grid-template-rows: repeat(6, minmax(8rem, 100px));
+    margin: 2em;
+    /* grid-auto-rows: 1fr; */
+    /* padding: 1em; */
+}
+
+.grid-item {
+    border: 1px solid rgba(116, 115, 115, 0.8);
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.grid-item::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+
+  #sketch {
+    background-color: white;
+  }
