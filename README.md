@@ -4,6 +4,8 @@ A completel collection of my projects from The Odin Project (to be updated)
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/).
 
+Each Project has its own detailed readme.
+
 ## Built with
 
 ### Technologies
@@ -21,12 +23,9 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/).
 
 ### What I learned
 
-* Basic HTML and CSS.
+* Basic HTML, CSS and JavaScript.
 * Responsive design principles via **Flexbox** and **Grid**.
 * Better understanding of Git and Github.
-
-### What could be improved
-
 
 ## Author
 
