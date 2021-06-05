@@ -42,6 +42,8 @@ function play(e) {
         modal.style.display = 'block'
         if (scoreBoard.computer === 5) {
             winnerFinal.textContent = 'Computer Wins !!'
+        } else if (scoreBoard.player === 5) {
+            winnerFinal.textContent = 'You Win !!'
         }
     }
     console.log(playerChoice, computerChoice, win, scoreBoard, gameOver())
