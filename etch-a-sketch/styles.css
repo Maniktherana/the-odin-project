@@ -10,6 +10,7 @@ body{
 button {
     font-family: 'Sriracha', cursive;
     font-size: 1.3em;
+    margin: .2em ;
 }
 
 .container {
@@ -33,11 +34,11 @@ button {
 
 .button-container {
     display: flex;
+    justify-content: space-around;
     width: 80%;
     padding-top: 2em;
     padding-bottom: 2em;
 }
-
 
 .grid-container {
     display: grid;
