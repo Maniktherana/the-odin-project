@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
+    <title>Etch-A-sketch</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
+        <p>magic  <span><strong>Etch A Sketch</strong></span>  screen</h1>
         <div class="grid-container">
 
         </div>
         <div class="button-container">
-            <button class="size" id="small">Small</button>
-            <button class="size" id="medium" >Medium</button>
-            <button class="size" id="large">Large</button>
-            <button class="mode" id="clear">Clear</button>
-            <button class="mode" id="classic">Classic</button>
-            <button class="mode" id="sprinkles">Sprinkles</button>
+            <div class="size-buttons">
+                <button class="size" id="small">Small</button>
+                <button class="size" id="medium" >Medium</button>
+                <button class="size" id="large">Large</button>
+            </div>
+            <div class="mode-buttons">
+                <button class="mode" id="classic">Classic</button>
+                <button class="mode" id="dark">Dark</button>
+                <button class="mode" id="sprinkles">Sprinkles</button>
+            </div>
+            <div class="eraser">
+                <button class="mode" id="clear">Clear</button>
+            </div> 
         </div>
     </div>
 </body>

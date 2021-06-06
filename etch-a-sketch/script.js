@@ -27,8 +27,8 @@ function action(e) {
 
 function smallGrid() {  
     clearGrid()
-    gridContainer.setAttribute('style', 'grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(6, 1fr)');    
-    for (let i = 0; i < 36; i++) {
+    gridContainer.setAttribute('style', 'grid-template-columns: repeat(8, 1fr); grid-template-rows: repeat(8, 1fr)');    
+    for (let i = 0; i < 64; i++) {
         let div = document.createElement('div')
         div.classList.toggle('grid-item')
         gridContainer.appendChild(div);
@@ -39,8 +39,8 @@ function smallGrid() {
 function mediumGrid() {
     clearGrid()
 
-    gridContainer.setAttribute('style', 'grid-template-columns: repeat(8, 1fr); grid-template-rows: repeat(8, 1fr)');    
-    for (let i = 0; i < 64; i++) {
+    gridContainer.setAttribute('style', 'grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr)');    
+    for (let i = 0; i < 1024; i++) {
         let div = document.createElement('div')
         div.classList.toggle('grid-item')
         gridContainer.appendChild(div);
@@ -56,7 +56,6 @@ function largeGrid() {
         let div = document.createElement('div')
         div.classList.toggle('grid-item')
         gridContainer.appendChild(div);
-        // div.style.backgroundColor = "black"
     }
     hoverColor()
 }
@@ -65,34 +64,17 @@ function largeGrid() {
 sizes.forEach(size => size.addEventListener('click', generateGrid))
 modes.forEach(mode => mode.addEventListener('click', action))
 
-// const etch = document.querySelectorAll('.grid-container > div')
-// etch.forEach((item) => {
-//     item.count = 0
-//     item.addEventListener('mouseenter', (e) => {
-//         e.target.style.backgroundColor = '#707070';
-//         console.log('ok')
-//     })
-// })
-
-//Event Listener old
-// for (let i = 0; i < etch.length; i++) {
-//     etch[i].onclick = function(e) {
-//         console.log('ok')
-//     }
-//   }
-
 function hoverColor() {
     let items = document.querySelectorAll('.grid-item');
     items.forEach(item => {
       item.addEventListener('mouseover', () => {
-        item.style.backgroundColor = 'black';
+        item.style.backgroundColor = '#414141';
       });
     });
   }
 
 function pageLoad() {
     mediumGrid()
-    // hoverColor()
 }
 
 pageLoad()
