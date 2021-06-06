@@ -33,7 +33,7 @@ function smallGrid() {
         div.classList.toggle('grid-item')
         gridContainer.appendChild(div);
     }
-    
+    hoverColor()
 }
 
 function mediumGrid() {
@@ -45,6 +45,7 @@ function mediumGrid() {
         div.classList.toggle('grid-item')
         gridContainer.appendChild(div);
     }
+    hoverColor()
 }
 
 function largeGrid() {
@@ -55,22 +56,23 @@ function largeGrid() {
         let div = document.createElement('div')
         div.classList.toggle('grid-item')
         gridContainer.appendChild(div);
-        
+        // div.style.backgroundColor = "black"
     }
+    hoverColor()
 }
 
 //Event listener new
 sizes.forEach(size => size.addEventListener('click', generateGrid))
 modes.forEach(mode => mode.addEventListener('click', action))
 
-const etch = document.querySelectorAll('.grid-container > div')
-etch.forEach((item) => {
-    item.count = 0
-    item.addEventListener('mouseenter', (e) => {
-        e.target.style.backgroundColor = '#707070';
-        console.log('ok')
-    })
-})
+// const etch = document.querySelectorAll('.grid-container > div')
+// etch.forEach((item) => {
+//     item.count = 0
+//     item.addEventListener('mouseenter', (e) => {
+//         e.target.style.backgroundColor = '#707070';
+//         console.log('ok')
+//     })
+// })
 
 //Event Listener old
 // for (let i = 0; i < etch.length; i++) {
@@ -79,8 +81,18 @@ etch.forEach((item) => {
 //     }
 //   }
 
+function hoverColor() {
+    let items = document.querySelectorAll('.grid-item');
+    items.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = 'black';
+      });
+    });
+  }
+
 function pageLoad() {
     mediumGrid()
+    // hoverColor()
 }
 
 pageLoad()
