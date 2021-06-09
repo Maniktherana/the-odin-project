@@ -1,5 +1,13 @@
-body {
-    background-color: #f6f9fc;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+html, body {
+    background-color: #F6F9FC;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .calculator-container {
@@ -14,7 +22,8 @@ body {
     width: 350px;
     height: 480px;
     border-radius: 30px;
-
+    box-shadow: -1px 14px 38px -4px rgba(0,0,0,0.66);
+    color: #F6F9FC;
 }
 
 .screen-container {
@@ -44,6 +53,10 @@ button {
     background: rgb(93,112,130);
     background: linear-gradient(180deg, rgb(81, 101, 120) 51%, rgb(63, 85, 106) 100%);
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    color: #f6f9fcb6;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    transition: all 0.15s ease-in-out;
 }
 
 .number, .decimal {
@@ -68,4 +81,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 7px 2px rgba(0,0,0,0.56);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
 }
