@@ -99,8 +99,7 @@ function mediumGrid(gameMode) {
 
 ### Continued development
 
-I still need to add the sprinkles and classic mode as well as the clear button functionality.
-I also need to document my code.
+I haven't been able to add the optional feature where a square is darkened on mouse hover.
 
 ### Useful resources
 
