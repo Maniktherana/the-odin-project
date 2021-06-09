@@ -71,16 +71,29 @@ This is a solution to the project: ETCH-A-SKETCH from The Odin Project's [curric
 }
 ```
 ```js
-function mediumGrid() {
-    clearGrid()
+/**
+ * Fill grid-container with an 16x16 grid of square divs with class .grid-item.
+ * @param {string} gameMode The current game mode
+ */
+function mediumGrid(gameMode) {
+    
+    // Remove current grid
+    eraseGrid()
 
+    // Set CSS for gridContainer
     gridContainer.setAttribute('style', 'grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr)');    
+    
+    // Make a 16x16 grid of square divs
     for (let i = 0; i < 1024; i++) {
         let div = document.createElement('div')
+        div.setAttribute('id', i); 
         div.classList.toggle('grid-item')
-        gridContainer.appendChild(div);
+        gridContainer.appendChild(div)
     }
-    hoverColor()
+    
+    // Color grid with current game mode
+    hoverColor(gameMode)
+
 }
 ```
 
