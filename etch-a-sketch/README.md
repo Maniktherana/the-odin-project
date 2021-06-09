@@ -22,6 +22,10 @@ This is a solution to the project: ETCH-A-SKETCH from The Odin Project's [curric
 
 - In this project you’ll be creating a pretty neat toy for your portfolio to flex your DOM manipulation skills. You’re going to build a browser version of something between a sketchpad and an Etch-A-Sketch.
 
+- (Optional): Instead of just changing the color of your grid from black to white (for example) have each pass through it with the mouse change to a completely random RGB value. Then try having each pass just add another 10% of black to it so that only after 10 passes is the square completely black.
+
+- [More details](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project#assignment)
+
 ### Screenshot
 
 ![coming soon](./screenshot.png)
