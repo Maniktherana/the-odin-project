@@ -28,7 +28,7 @@ This is a solution to the project: ETCH-A-SKETCH from The Odin Project's [curric
 
 ### Screenshot
 
-![coming soon](./screenshot.png)
+![screenshot](./screenshot.png)
 
 
 ### Links
