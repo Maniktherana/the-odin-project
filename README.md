@@ -6,7 +6,30 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/).
 
 Each Project has its own detailed readme.
 
-## Built with
+- [Overview](#overview)
+  - [Introduction](#introduction)
+  - [Links](#links)
+- [Built with](#built-with)
+- [What I Learned](#what-i-learned)
+- [Continued Development](#continued-development)
+- [Useful Resources](#useful-resources)
+- [Author](#author)
+
+## Overview 
+
+### Introduction 👋
+
+### Links 🔗
+
+## Projects 💻
+
+* Google Homepage Clone
+* Build This Page - google search clone
+* Rock Paper Scissors
+* Etch A Sketch
+* JavaScript Calculator
+
+## Built with 🛠
 
 ### Technologies
 
@@ -19,13 +42,16 @@ Each Project has its own detailed readme.
 * Visual Studio Code
 * Terminal
 * Git and GitHub
-## Summary
 
-### What I learned
+## What I learned 🎓
 
 * Basic HTML, CSS and JavaScript.
 * Responsive design principles via **Flexbox** and **Grid**.
 * Better understanding of Git and Github.
+
+## Continued Development 🚀
+
+## Useful Resources 📖
 
 ## Author
 
