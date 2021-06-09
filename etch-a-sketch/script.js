@@ -2,6 +2,7 @@
 const sizes = document.querySelectorAll('.size')
 const modes = document.querySelectorAll('.mode')
 const gridContainer = document.querySelector('.grid-container')
+const clear = document.getElementById('clear')
 
 function generateGrid(e) {
     console.log(e.target.id)
@@ -14,7 +15,7 @@ function generateGrid(e) {
     }
 }
 
-function clearGrid() {
+function eraseGrid() {
     while(gridContainer.firstChild){
         gridContainer.removeChild(gridContainer.firstChild)
     }
@@ -26,7 +27,7 @@ function action(e) {
 }
 
 function smallGrid() {  
-    clearGrid()
+    eraseGrid()
     gridContainer.setAttribute('style', 'grid-template-columns: repeat(8, 1fr); grid-template-rows: repeat(8, 1fr)');    
     for (let i = 0; i < 64; i++) {
         let div = document.createElement('div')
@@ -37,7 +38,7 @@ function smallGrid() {
 }
 
 function mediumGrid() {
-    clearGrid()
+    eraseGrid()
 
     gridContainer.setAttribute('style', 'grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr)');    
     for (let i = 0; i < 1024; i++) {
@@ -49,7 +50,7 @@ function mediumGrid() {
 }
 
 function largeGrid() {
-    clearGrid()
+    eraseGrid()
 
     gridContainer.setAttribute('style', 'grid-template-columns: repeat(64, 1fr); grid-template-rows: repeat(64, 1fr)');    
     for (let i = 0; i < 4096    ; i++) {
@@ -60,17 +61,25 @@ function largeGrid() {
     hoverColor()
 }
 
-//Event listener new
+function clearGrid() {
+    let items = document.querySelectorAll('.grid-item')
+    items.forEach(item => {
+        item.style.backgroundColor = 'rgb(212, 212, 212)'
+    })
+}
+
+//Event listeners
 sizes.forEach(size => size.addEventListener('click', generateGrid))
 modes.forEach(mode => mode.addEventListener('click', action))
+clear.addEventListener('click', clearGrid)
 
 function hoverColor() {
-    let items = document.querySelectorAll('.grid-item');
+    let items = document.querySelectorAll('.grid-item')
     items.forEach(item => {
       item.addEventListener('mouseover', () => {
-        item.style.backgroundColor = '#414141';
-      });
-    });
+        item.style.backgroundColor = '#414141'
+      })
+    })
   }
 
 function pageLoad() {
