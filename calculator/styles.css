@@ -5,16 +5,67 @@ body {
 .calculator-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin: 1em;
+    padding: 1em;
+    background: rgb(75,95,116);
+    background: linear-gradient(180deg, rgba(75,95,116,1) 0%, rgba(40,64,88,1) 100%);
+    width: 350px;
+    height: 480px;
+    border-radius: 30px;
+
 }
 
 .screen-container {
     padding: 1em;
+    width: 280px;
+    height: 100px;
+    margin-bottom: 25px;
+    border: 19px solid #0c2742;
+    border-radius: 20px;
+    background: rgb(45,68,91);
+    background: linear-gradient(180deg, rgba(45,68,91,1) 0%, rgba(21,47,64,1) 100%);
+
 }
 
 .button-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    margin: 0.5em 0.2em;
+    border-radius: 7px;
+    border: 1px solid black;
+    background: rgb(93,112,130);
+    background: linear-gradient(180deg, rgb(81, 101, 120) 51%, rgb(63, 85, 106) 100%);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.number, .decimal {
+    background: rgb(53,77,99);
+    background: linear-gradient(180deg, rgba(53,77,99,1) 50%, rgba(43,67,90,1) 100%);
+}
+
+.clear-screen {
+    background: rgb(226,99,85);
+    background: linear-gradient(180deg, rgba(226,99,85,1) 50%, rgba(226,99,85,1) 100%);
+}
+
+.clear {
+    background: rgb(226,146,85);
+    background: linear-gradient(180deg, rgba(226,146,85,1) 50%, rgba(226,127,85,1) 100%);
+}
+
+.equals {
+    background: rgb(63,182,139);
+    background: linear-gradient(180deg, rgba(63,182,139,1) 51%, rgba(51,163,119,1) 100%);
+}
+
+button:hover {
+    cursor: pointer;
 }
