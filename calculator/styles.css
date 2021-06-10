@@ -40,11 +40,13 @@ html, body {
     border-radius: 20px;
     background: rgb(45,68,91);
     background: linear-gradient(180deg, rgba(45,68,91,1) 0%, rgba(21,47,64,1) 100%);
-
+    overflow: hidden;
 }
 
 .current-calculation {
     font-size: xx-large;
+    letter-spacing: 3px;
+    
 }
 
 .button-container {
