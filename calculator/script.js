@@ -9,7 +9,7 @@ function updateDisplay(e) {
         const keyContent = key.textContent
         const displayedNum = display.textContent
 
-        if (display.textContent === '0') {
+        if (displayedNum === '0') {
             display.textContent = keyContent
         } else {
             display.textContent = displayedNum + keyContent
@@ -20,6 +20,16 @@ function updateDisplay(e) {
             } else {
                 display.textContent = displayedNum + keyContent
             }
+        }
+        if (action === 'delete') {
+            if (displayedNum !== '0' && displayedNum.length !== 1) {
+                display.textContent = displayedNum.substring(0, displayedNum.length - 1);
+            } else {
+                display.textContent = '0'
+            }
+        }
+        if (action === 'clear') {
+            display.textContent = '0'
         }
     }
 }
