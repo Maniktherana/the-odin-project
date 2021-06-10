@@ -50,7 +50,6 @@ html, body {
 .button-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
 }
 
 button {
@@ -86,6 +85,8 @@ button {
 }
 
 .equals {
+    grid-column: 3 / span 2;
+    width: 160px;
     background: rgb(63,182,139);
     background: linear-gradient(180deg, rgba(63,182,139,1) 51%, rgba(51,163,119,1) 100%);
 }
