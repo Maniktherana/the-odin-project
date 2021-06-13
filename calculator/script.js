@@ -9,29 +9,38 @@ function updateDisplay(e) {
         const keyContent = key.textContent
         const displayedNum = display.textContent
 
-        if (displayedNum === '0') display.textContent = keyContent
-        display.textContent = displayedNum + keyContent
-        
-        if (action === 'decimal')
-        if(displayedNum.includes('.')) display.textContent = displayedNum
-        display.textContent = displayedNum + keyContent
-        
-        if (action === 'delete') 
-        if (displayedNum !== '0' && displayedNum.length !== 1) display.textContent = displayedNum.substring(0, displayedNum.length - 1);
-        display.textContent = '0'
-
-        if (action === 'clear') display.textContent = '0'
-        
+        if (displayedNum === '0') {
+            display.textContent = keyContent
+        } else {
+            display.textContent = displayedNum + keyContent
+        }
+        if (action === 'decimal') {
+            if(displayedNum.includes('.')) {
+                display.textContent = displayedNum
+            } else {
+                display.textContent = displayedNum + keyContent
+            }
+        }
+        if (action === 'delete') {
+            if (displayedNum !== '0' && displayedNum.length !== 1) {
+                display.textContent = displayedNum.substring(0, displayedNum.length - 1);
+            } else {
+                display.textContent = '0'
+            }
+        }
+        if (action === 'clear') {
+            display.textContent = '0'
+        }
     }
 }
 
-// logs clicks to console
+
 keys.addEventListener('click', e => {
     if (e.target.matches('button')) {
         const key = e.target
         const action = key.dataset.action
         if (!action) {
-            console.log(key.textContent)
+            console.log('number key')
         } if (action === 'decimal') {
             console.log('decimal key')
         } if (action === 'clear') {
@@ -52,5 +61,4 @@ keys.addEventListener('click', e => {
     }
 })
 
-// Event listener
 keys.addEventListener('click', updateDisplay)
