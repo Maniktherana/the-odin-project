@@ -1,6 +1,6 @@
 # The Odin Project
 
-A completel collection of my projects from The Odin Project (to be updated)
+A collection of my projects from The Odin Project (🚧 updates coming soon)
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/).
 
@@ -20,6 +20,10 @@ Each Project has its own detailed readme.
 ### Introduction 👋
 
 ### Links 🔗
+
+* [Etch-a-sketch](https://maniktherana.github.io/etch-a-sketch/)
+* [Calculator](https://maniktherana.github.io/calculator/)
+* [Google homepage clone](https://maniktherana.github.io/google-homepage/)
 
 ## Projects 💻
 
