@@ -1,4 +1,4 @@
-# Etch A Sketch 
+# JavaScript Calculator (Under Construction 🚧)
 
 This is a solution to the project: Calculator from The Odin Project's [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator).
 
@@ -35,7 +35,7 @@ This is a solution to the project: Calculator from The Odin Project's [curriculu
 
 ### Links
 
-🔗 **Live preview:** [link:]()
+🔗 **Live preview:** [link](https://maniktherana.github.io/calculator/)
 
 ## My process
 
@@ -53,18 +53,35 @@ This is a solution to the project: Calculator from The Odin Project's [curriculu
 * Generating DOM elements from JavaScript
 
 ```html
-
+<div id="current-scrren">
+                <p><span class="current-calculation">0</span></p>
+            </div>
 ```
 ```css
-
+.screen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1em;
+    width: 280px;
+    height: 80px;
+    margin-bottom: 25px;
+    border: 19px solid #0c2742;
+    border-radius: 20px;
+    background: rgb(45,68,91);
+    background: linear-gradient(180deg, rgba(45,68,91,1) 0%, rgba(21,47,64,1) 100%);
+    overflow: hidden;
+}
 ```
 ```js
+function updateDisplay(e) {
+    if (e.target.matches('button')) {
+        const key = e.target
+        const action = key.dataset.action
+        const keyContent = key.textContent
+        const displayedNum = display.textContent
 
 ```
-
-### Continued development
-
-
 
 ### Useful resources
 
