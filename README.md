@@ -1,6 +1,6 @@
 # The Odin Project
 
-A collection of my projects from The Odin Project (🚧 updates coming soon)
+A collection of my projects from The Odin Project
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/).
 
